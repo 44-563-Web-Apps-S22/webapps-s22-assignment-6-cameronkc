@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>President guess by Cameron McDowell</h2>
+
+    <form>
+        <label for="form1_age">Enter the
+            secret president name </label>
+        <input type="password" id="form1_age" name="form1_age" min=10 max=50 step=2 value=30> <br>
+
+        <label for="form1_nick">Guess the president</label>
+        <input type="text" id="form1_nick" name="form1_nick" autofocus> <br>
+
+        <input type="button" onclick="resolveForm()" value="Check the guess">
+    </form>
+
+
+    <p id="result"> </p>
+
+    <script>
+        total = 0
+        correctCount = 0
+
+        function resolveForm() {
+            console.log("Getting form values")
+            answer = document.getElementById("form1_age").value
+            guess = document.getElementById("form1_nick").value
+            out = document.getElementById("result")
+            if (answer === guess) {
+                correctCount += 1
+                out.innerHTML = `You got it right ${correctCount} / ${total}`
+            } else {
+                total += 1
+                out.innerHTML = `Wrong ${correctCount} / ${total}`
+            }
+        }
+    </script>
+
+</body>
+
+</html>
