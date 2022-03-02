@@ -11,7 +11,7 @@
         <input type="password" id="form1_age" name="form1_age" min=10 max=50 step=2 value=30> <br>
 
         <label for="form1_nick">Guess the president</label>
-        <input type="text" id="form1_nick" name="form1_nick" autofocus> <br>
+        <input type="text" placeholder="George Washington" id="form1_nick" name="form1_nick" autofocus> <br>
 
         <input type="button" onclick="resolveForm()" value="Check the guess">
     </form>
@@ -33,7 +33,7 @@
                 out.innerHTML = `You got it right ${correctCount} / ${total}`
             } else {
                 total += 1
-                out.innerHTML = `Wrong ${correctCount} / ${total}`
+                out.innerHTML = `Wrong President ${correctCount} / ${total}`
             }
         }
     </script>
